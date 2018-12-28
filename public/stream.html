@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WStream</title>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
+	<script src="/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+
+
+</head>
+
+<body>
+	<img src="" class="cap-img">
+	<canvas class="cap-canvas" width="500" height="500"></canvas>
+
+	<script>
+		function setCanvasImg(ctx,b64){
+			var image = new Image();
+			image.onload = function() {
+			  ctx.drawImage(image, 0, 0);
+			};
+			image.src = "data:image/jpeg;base64,"+b64;
+		}
+
+		var socket = io();
+		var ctx = $('.cap-canvas')[0].getContext("2d");
+
+
+		socket.on('stream frame base64',function(b64){
+			setCanvasImg(ctx,b64)
+		})
+	</script>
+
+</body>
+</html>
