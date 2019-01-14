@@ -15,8 +15,8 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/videos', async (req, res, next) => {
-
+router.get('/videos.html', async (req, res, next) => {
+	console.log('videos');
 	let videoList = await fs.readdir('./public/videos');
 
 	videoList = videoList.filter(item=>(item.indexOf('.mp4')>=0))
