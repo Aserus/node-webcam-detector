@@ -1,6 +1,6 @@
 {
-  "apps": [
-    {
+	"apps": [
+		{
 			"name": "app",
 			"script": "index.js",
 			"merge_logs": true,
@@ -9,6 +9,6 @@
 			"max_memory_restart": "1024M",
 			"watch": false,
 			"ignore_watch":["public","views","node_modules"]
-    }
-  ]
+		}
+	]
 }
