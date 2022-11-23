@@ -24,7 +24,7 @@
     "opencv4nodejs": "^5.2.0",
     "pug": "^2.0.4",
     "rimraf": "^2.7.1",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.5.0",
     "tempdir": "^2.0.0",
     "tmpdir": "^1.0.1",
     "videoshow": "^0.1.11"
